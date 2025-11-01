@@ -1,6 +1,7 @@
 package net.hellay.tailored;
 
 import net.fabricmc.api.ModInitializer;
+import net.hellay.tailored.init.TailoredEnchantmentEffects;
 import net.hellay.tailored.init.TailoredItems;
 
 public class Tailored implements ModInitializer {
@@ -9,5 +10,6 @@ public class Tailored implements ModInitializer {
     @Override
     public void onInitialize() {
         TailoredItems.registerModItems();
+        TailoredEnchantmentEffects.registerEnchantmentEffects();
     }
 }
