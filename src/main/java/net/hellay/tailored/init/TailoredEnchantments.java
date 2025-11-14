@@ -24,7 +24,7 @@ public class TailoredEnchantments {
 
         register(registerable, SHARPSHOOTER, Enchantment.builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                items.getOrThrow(ItemTags.SHARP_WEAPON_ENCHANTABLE),
                 1,
                 4,
                 Enchantment.leveledCost(7, 9),

@@ -1,6 +1,7 @@
 package net.hellay.tailored.enchantment;
 
 import com.mojang.serialization.MapCodec;
+import net.hellay.tailored.init.TailoredEntities;
 import net.minecraft.enchantment.EnchantmentEffectContext;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.entity.Entity;
@@ -15,7 +16,7 @@ public record SharpshooterEnchantmentEffect() implements EnchantmentEntityEffect
     @Override
     public void apply(ServerWorld world, int level, EnchantmentEffectContext context, Entity user, Vec3d pos) {
         if (level == 1) {
-            EntityType.ARROW.spawn(world, user.getBlockPos(), SpawnReason.TRIGGERED);
+            TailoredEntities.SCISSORS_PROJECTILE_ENTITY.spawn(world, user.getBlockPos(), SpawnReason.TRIGGERED);
         }
     }
 

@@ -2,6 +2,7 @@ package net.hellay.tailored.client;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.hellay.tailored.datagen.TailoredItemTagProvider;
 import net.hellay.tailored.datagen.TailoredRegistryDataGenerator;
 import net.hellay.tailored.init.TailoredEnchantments;
 import net.minecraft.registry.RegistryBuilder;
@@ -14,6 +15,8 @@ public class TailoredDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(TailoredRegistryDataGenerator::new);
+        pack.addProvider(TailoredItemTagProvider::new);
+
     }
 
     @Override
